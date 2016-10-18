@@ -1,5 +1,7 @@
 [![](https://badge.imagelayers.io/jokka/pestle:latest.svg)](https://imagelayers.io/?images=jokka/pestle:latest 'Get your own badge on imagelayers.io')
 
+[![Build Status](https://travis-ci.org/jokka/pestle.svg?branch=latest)](https://travis-ci.org/jokka/pestle)
+
 # What is SBT?
 
 ![logo](https://raw.githubusercontent.com/1science/docker-sbt/latest/logo.png)
