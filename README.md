@@ -1,4 +1,4 @@
-[![](https://badge.imagelayers.io/1science/sbt:latest.svg)](https://imagelayers.io/?images=1science/sbt:latest 'Get your own badge on imagelayers.io')
+[![](https://badge.imagelayers.io/jokka/pestle:latest.svg)](https://imagelayers.io/?images=jokka/pestle:latest 'Get your own badge on imagelayers.io')
 
 # What is SBT?
 
@@ -22,13 +22,13 @@ This image is based on [Oracle JRE 8](https://github.com/1science/docker-java/tr
 You can run the default `sbt` command simply:
 
 ```
- docker run -ti --rm 1science/sbt sbt sbt-version 
+ docker run -ti --rm jokka/pestle sbt sbt-version 
 ```
 
 This image is configured with a workdir `/app`, so to build your project you have to mount a volume for your sources and another at `/root/.ivy2` to hold the ivy cache artifacts :
 
 ```
-docker run -ti --rm -v "$PWD:/src" -v "$HOME/.ivy2":/root/.ivy2 1science/sbt sbt clean compile
+docker run -ti --rm -v "$PWD:/src" -v "$HOME/.ivy2":/root/.ivy2 jokka/pestle sbt clean compile
 ```
 
 
