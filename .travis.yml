@@ -7,7 +7,7 @@ language: generic
 
 env:
   global:
-    - REPO=jokka/pestle
+    - REPO=spfr/pestle
     - TAG=$TRAVIS_BRANCH
     - COMMIT=${TRAVIS_COMMIT::8}
 
