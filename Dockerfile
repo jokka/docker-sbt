@@ -7,7 +7,8 @@ MAINTAINER Jovan Erčić <jovan.ercic@gmail.com>
 
 RUN apk update
 
-RUN apk add nodejs
+RUN apk add nodejs && \
+    npm -g install npm@latest
 
 RUN apk add git
 
