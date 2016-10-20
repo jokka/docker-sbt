@@ -27,7 +27,11 @@ RUN apt-get install -y -q --no-install-recommends \
     wget \
     pkg-config \
     libcairo2-dev libjpeg-dev libgif-dev \
-    openjdk-8-jdk \
+    openjdk-8-jdk
+
+# Run updates and install deps
+RUN apt-get update
+RUN apt-get install -y -q --no-install-recommends \
     python-pip \
     python-setuptools \
     && rm -rf /var/lib/apt/lists/* \
