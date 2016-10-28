@@ -37,6 +37,19 @@ RUN apt-get install -y -q --no-install-recommends \
     && rm -rf /var/lib/apt/lists/* \
     && apt-get -y autoclean
 
+RUN apt-get update
+RUN apt-get install -y -q --no-install-recommends \
+    build-essential chrpath libssl-dev libxft-dev \
+    libfreetype6 libfreetype6-dev \
+    libfontconfig1 libfontconfig1-dev
+
+RUN cd ~ \
+    && export PHANTOM_JS="phantomjs-2.1.1-linux-x86_64" \
+    && wget https://bitbucket.org/ariya/phantomjs/downloads/$PHANTOM_JS.tar.bz2 \
+    && tar xvjf $PHANTOM_JS.tar.bz2 \
+    && mv $PHANTOM_JS /usr/local/share \
+    && ln -sf /usr/local/share/$PHANTOM_JS/bin/phantomjs /usr/local/bin
+
 RUN pip install awscli
 RUN pip install https://github.com/google/closure-linter/zipball/master
 
